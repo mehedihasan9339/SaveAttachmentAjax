@@ -151,7 +151,7 @@
         fetchData();
 
         $('#photoPreview').on('click', function () {
-            $('#photo').click(); // Trigger the file input click
+            $('#photo').click(); 
         });
 
         $('#photo').on('change', function () {
@@ -161,7 +161,7 @@
                 reader.onload = function (e) {
                     $('#photoPreview').attr('src', e.target.result); // Set the photo preview
                 };
-                reader.readAsDataURL(file); // Convert the file to a base64 URL
+                reader.readAsDataURL(file);
             }
         });
 
@@ -188,7 +188,7 @@
                     $('#message').text('Employee saved successfully!').css('color', '#28a745');
                     $('#employeeForm')[0].reset();
                     $('#photoPreview').attr('src', '/Photos/default.png'); // Reset preview
-                    fetchData(); // Refresh employee list
+                    fetchData(); 
                 },
                 error: function (error) {
                     $('#message').text('Error saving employee: ' + error.responseText).css('color', '#dc3545');
@@ -253,7 +253,7 @@
                 type: 'DELETE',
                 success: function () {
                     $('#message').text('Employee deleted successfully!').css('color', '#28a745');
-                    fetchData(); // Refresh employee list
+                    fetchData();
                 },
                 error: function (error) {
                     $('#message').text('Error deleting employee: ' + error.responseText).css('color', '#dc3545');

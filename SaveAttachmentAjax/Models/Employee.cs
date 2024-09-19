@@ -7,11 +7,11 @@ namespace SaveAttachmentAjax.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; } // Primary key and identity
+        public int Id { get; set; } 
 
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string PhotoPath { get; set; } // Store the path of the uploaded photo
+        public string PhotoPath { get; set; } 
     }
 }

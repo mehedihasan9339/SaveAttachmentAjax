@@ -89,12 +89,10 @@ namespace SaveAttachmentAjax.Controllers
                 return NotFound();
             }
 
-            // Update employee properties
             employee.Name = employeeDto.Name;
             employee.Phone = employeeDto.Phone;
             employee.Email = employeeDto.Email;
 
-            // Handle photo upload
             if (employeeDto.Photo != null && employeeDto.Photo.Length > 0)
             {
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Photos");
